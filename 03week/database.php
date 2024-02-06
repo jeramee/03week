@@ -7,6 +7,7 @@
         $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
+        echo 'Connection failed: ' . $error_message;
         include('database_error.php');
         exit();
     }
